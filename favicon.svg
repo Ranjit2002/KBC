@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="kbcNavy" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0a1d56"/>
+      <stop offset="45%" stop-color="#06123b"/>
+      <stop offset="80%" stop-color="#030822"/>
+      <stop offset="100%" stop-color="#010414"/>
+    </radialGradient>
+
+    <!-- Metallic Gold Gradient 1 -->
+    <linearGradient id="goldLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8b3"/>
+      <stop offset="25%" stop-color="#e5b839"/>
+      <stop offset="50%" stop-color="#996e14"/>
+      <stop offset="75%" stop-color="#f5cf47"/>
+      <stop offset="100%" stop-color="#7a520a"/>
+    </linearGradient>
+
+    <!-- Metallic Gold Gradient 2 -->
+    <linearGradient id="goldDark" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffea75"/>
+      <stop offset="35%" stop-color="#b8860b"/>
+      <stop offset="70%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#8a5a00"/>
+    </linearGradient>
+
+    <!-- Circular Paths for Text -->
+    <!-- Top Arc (Clockwise) -->
+    <path id="topTextArc" d="M 68 256 A 188 188 0 0 1 444 256" fill="none" />
+    <!-- Bottom Arc (Clockwise) -->
+    <path id="bottomTextArc" d="M 436 264 A 180 180 0 0 1 76 264" fill="none" />
+
+    <!-- Glow Filter -->
+    <filter id="kbcGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Outer Ring with Shadow -->
+  <circle cx="256" cy="256" r="250" fill="url(#kbcNavy)" stroke="url(#goldLight)" stroke-width="8" filter="url(#kbcGlow)"/>
+  
+  <!-- Secondary Beveled Gold Outer Rim -->
+  <circle cx="256" cy="256" r="236" fill="none" stroke="url(#goldDark)" stroke-width="4" />
+  <circle cx="256" cy="256" r="228" fill="none" stroke="#ffd700" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.8" />
+
+  <!-- 32 Golden Studs / Rivets around outer boundary -->
+  <g fill="url(#goldLight)">
+    <!-- Repetitive decorative beads -->
+    <circle cx="256" cy="18" r="4" /><circle cx="256" cy="494" r="4" />
+    <circle cx="18" cy="256" r="4" /><circle cx="494" cy="256" r="4" />
+    <circle cx="87" cy="87" r="4" /><circle cx="425" cy="425" r="4" />
+    <circle cx="425" cy="87" r="4" /><circle cx="87" cy="425" r="4" />
+    <circle cx="164" cy="38" r="3.5" /><circle cx="348" cy="38" r="3.5" />
+    <circle cx="164" cy="474" r="3.5" /><circle cx="348" cy="474" r="3.5" />
+    <circle cx="38" cy="164" r="3.5" /><circle cx="38" cy="348" r="3.5" />
+    <circle cx="474" cy="164" r="3.5" /><circle cx="474" cy="348" r="3.5" />
+  </g>
+
+  <!-- Circular Outer Band Background for Text -->
+  <circle cx="256" cy="256" r="208" fill="#050e30" stroke="url(#goldLight)" stroke-width="3" />
+
+  <!-- Iconic Curved Text: KAUN BANEGA CROREPATI -->
+  <text font-family="'Arial Black', 'Helvetica', Impact, sans-serif" font-weight="900" font-size="28" fill="url(#goldLight)" letter-spacing="3.8" filter="url(#kbcGlow)">
+    <textPath href="#topTextArc" startOffset="50%" text-anchor="middle">
+      KAUN BANEGA CROREPATI
+    </textPath>
+  </text>
+
+  <!-- Iconic Curved Hindi/Sanskrit Motto: ज्ञानात् सर्वं सिध्यति -->
+  <text font-family="'Arial', 'Nirmala UI', sans-serif" font-weight="bold" font-size="21" fill="#ffe066" letter-spacing="5">
+    <textPath href="#bottomTextArc" startOffset="50%" text-anchor="middle">
+      * ज्ञानात् सर्वं सिध्यति *
+    </textPath>
+  </text>
+
+  <!-- Inner Concentric Golden Border -->
+  <circle cx="256" cy="256" r="148" fill="url(#kbcNavy)" stroke="url(#goldLight)" stroke-width="6" />
+  <circle cx="256" cy="256" r="140" fill="none" stroke="#d4af37" stroke-width="2" />
+
+  <!-- 16 Golden Sunburst / Gear Wheel Spokes (Chakra Pattern) -->
+  <g stroke="url(#goldLight)" stroke-width="3" opacity="0.85">
+    <line x1="256" y1="118" x2="256" y2="138" />
+    <line x1="256" y1="374" x2="256" y2="394" />
+    <line x1="118" y1="256" x2="138" y2="256" />
+    <line x1="374" y1="256" x2="394" y2="256" />
+    <line x1="158" y1="158" x2="173" y2="173" />
+    <line x1="339" y1="339" x2="354" y2="354" />
+    <line x1="339" y1="173" x2="354" y2="158" />
+    <line x1="158" y1="354" x2="173" y2="339" />
+  </g>
+
+  <!-- 16-Point Radiant Star / Sunburst Diamond Rays -->
+  <g fill="url(#goldDark)" opacity="0.9">
+    <!-- North / South / East / West points -->
+    <polygon points="256,120 262,142 256,146 250,142" />
+    <polygon points="256,392 262,370 256,366 250,370" />
+    <polygon points="120,256 142,262 146,256 142,250" />
+    <polygon points="392,256 370,262 366,256 370,250" />
+    <!-- Diagonal rays -->
+    <polygon points="160,160 178,174 175,178 164,175" />
+    <polygon points="352,352 334,338 337,334 348,337" />
+    <polygon points="352,160 338,178 334,175 337,164" />
+    <polygon points="160,352 174,334 178,337 175,348" />
+  </g>
+
+  <!-- Central Disc -->
+  <circle cx="256" cy="256" r="106" fill="#040b2b" stroke="url(#goldLight)" stroke-width="4" />
+  <circle cx="256" cy="256" r="98" fill="none" stroke="#4fc3f7" stroke-width="1.5" opacity="0.5" stroke-dasharray="3,3" />
+
+  <!-- Central KBC Emblem Typography -->
+  <g text-anchor="middle" font-family="'Arial Black', Impact, sans-serif" font-weight="900">
+    <!-- KBC Big Letters -->
+    <text x="256" y="278" font-size="74" fill="url(#goldLight)" letter-spacing="4" filter="url(#kbcGlow)">
+      KBC
+    </text>
+  </g>
+
+  <!-- Golden Accent Sparkles -->
+  <polygon points="256,182 258,190 266,192 258,194 256,202 254,194 246,192 254,190" fill="#ffffff" opacity="0.9" />
+  <polygon points="256,310 258,318 266,320 258,322 256,330 254,322 246,320 254,318" fill="#ffffff" opacity="0.9" />
+</svg>
